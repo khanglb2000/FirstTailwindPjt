@@ -1,20 +1,96 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="sm:scroll-smooth">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Logo Me</title>
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <!-- npx tailwindcss -i ./src/input.css -o ./build/css/style.css --watch -->
-  <body class="min-h-screen grid place-content-center radial-blue">
-    <div
-      class="bg-emerald-500 w-52 h-52 rounded-full shadow-2xl shadow-lime-200 grid place-content-center"
-    >
-      <div class="bg-teal-200 w-32 h-32 rounded-full grid place-content-center">
-        <div class="bg-red-500 w-16 h-16 rounded-full"></div>
-      </div>
-    </div>
+  <body class="min-h-screen bg-slate-50 dark:bg-black dark:text-white">
+    <header class="sticky top-0 z-10 bg-teal-700 text-white">
+      <section class="mx-auto flex max-w-4xl items-center justify-between p-4">
+        <h1 class="text-3xl font-medium">
+          <a href="#hotwheels">🐉 Logo Me</a>
+        </h1>
+        <div>
+          <button id="mobile-open-button" class="text-3xl focus:outline-none sm:hidden">&#9776;</button>
+          <nav class="hidden space-x-8 text-xl sm:block" aria-label="main">
+            <a href="#logo" class="hover:opacity-90">Our Logos</a>
+            <a href="#testimonial " class="hover:opacity-90">Testimonial </a>
+            <a href="#contact" class="hover:opacity-90">Contact Us</a>
+          </nav>
+        </div>
+      </section>
+    </header>
+    <main class="mx-auto mt-10 max-w-4xl">
+      <section
+        id="hotwheels"
+        class="z-10 mb-12 flex scroll-mt-40 flex-col-reverse items-center justify-center gap-8 px-6 sm:flex-row"
+      >
+        <article class="sm:w-1/2">
+          <h2 class="max-w-md text-center text-4xl font-bold text-slate-900 dark:text-white sm:text-left sm:text-5xl">
+            Itz not da same without da <span class="text-orange-400 dark:text-orange-200">Flame</span>
+          </h2>
+          <p class="mt-4 max-w-md text-center text-2xl text-slate-700 dark:text-slate-400 sm:text-left">
+            The first line of Hot Wheels Cars, known as The Original Sweet 16 was manufactured in 1967
+          </p>
+          <p class="mt-4 max-w-md text-center text-2xl text-slate-700 dark:text-slate-400 sm:text-left">
+            Although Hot Wheels were originally intended to be for children and young adults, they have become popular
+            with adult collectors, for whom limited edition models are now made available.
+          </p>
+        </article>
+        <img class="mt-10 w-1/2" src="./img/Hot_Wheels.png" alt="Hot Wheels" />
+      </section>
+
+      <hr class="mx-auto w-1/2 bg-black dark:bg-white" />
+
+      <section id="logo" class="my-12 scroll-mt-20 p-6">
+        <h2 class="mb-6 text-center text-4xl font-bold text-slate-900 dark:text-white sm:text-5xl">Our Logos</h2>
+        <ul class="mx-auto my-12 flex list-none flex-col items-center gap-8 sm:flex-row">
+          <li
+            class="flex w-2/3 flex-col items-center rounded-3xl border border-solid border-slate-900 bg-white py-6 px-2 shadow-xl dark:border-gray-100 sm:w-5/6"
+          >
+            <img class="mb-6 w-1/2" src="./img/Marvel.png" alt="Marvel" />
+            <h3 class="text-center text-3xl text-slate-900 dark:text-white">Heroes await...</h3>
+            <p class="mt-2 hidden text-center text-3xl text-slate-500 dark:text-slate-400 sm:block">$</p>
+            <p class="mt-2 text-center text-2xl text-slate-500 dark:text-slate-400 sm:hidden">
+              Part of the journey is the end.
+            </p>
+          </li>
+          <li
+            class="flex w-2/3 flex-col items-center rounded-3xl border border-solid border-slate-900 bg-white py-6 px-2 shadow-xl dark:border-gray-100 sm:w-5/6"
+          >
+            <img class="mb-6 w-1/2" src="./img/Naruto.png" alt="Naruto" />
+            <h3 class="text-center text-3xl text-slate-900 dark:text-white">Shinobi of Konoha</h3>
+            <p class="mt-2 hidden text-center text-3xl text-slate-500 dark:text-slate-400 sm:block">$$</p>
+            <p class="mt-2 text-center text-2xl text-slate-500 dark:text-slate-400 sm:hidden">
+              Hard work is worthless for those that don't believe in themselves.
+            </p>
+          </li>
+          <li
+            class="flex w-2/3 flex-col items-center rounded-3xl border border-solid border-slate-900 bg-white py-6 px-2 shadow-xl dark:border-gray-100 sm:w-5/6"
+          >
+            <img class="mb-6 w-1/2" src="./img/Pokemon.png" alt="Pokemon" />
+            <h3 class="text-center text-3xl text-slate-900 dark:text-white">Gotta catch em all!</h3>
+            <p class="mt-2 hidden text-center text-3xl text-slate-500 dark:text-slate-400 sm:block">$$$</p>
+            <p class="mt-2 text-center text-2xl text-slate-500 dark:text-slate-400 sm:hidden">
+              Make your wonderful dream a reality, and it will become your truth.
+            </p>
+          </li>
+        </ul>
+      </section>
+      <hr class="mx-auto w-1/2 bg-black dark:bg-white" />
+
+      <section id="testimonial" class="my-12 p-6">
+        <h2 class="mb-6 text-center text-4xl font-bold text-slate-900 dark:text-white sm:text-5xl">Testimonial</h2>
+      </section>
+      <hr class="mx-auto w-1/2 bg-black dark:bg-white" />
+
+      <section id="contact" class="my-12 p-6">
+        <h2 class="mb-6 text-center text-4xl font-bold text-slate-900 dark:text-white sm:text-5xl">Contact Us</h2>
+      </section>
+    </main>
   </body>
 </html>
