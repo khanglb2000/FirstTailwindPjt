@@ -26,7 +26,7 @@
     <main class="mx-auto mt-10 max-w-4xl">
       <section
         id="hotwheels"
-        class="z-10 mb-12 flex scroll-mt-40 flex-col-reverse items-center justify-center gap-8 px-6 sm:flex-row"
+        class="widescreen:section-min-height tallscreen:section-min-height z-10 mb-12 flex scroll-mt-40 flex-col-reverse items-center justify-center gap-8 px-6 sm:flex-row"
       >
         <article class="sm:w-1/2">
           <h2 class="max-w-md text-center text-4xl font-bold text-slate-900 dark:text-white sm:text-left sm:text-5xl">
@@ -45,7 +45,7 @@
 
       <hr class="mx-auto w-1/2 bg-black dark:bg-white" />
 
-      <section id="logo" class="my-12 scroll-mt-20 p-6">
+      <section id="logo" class="widescreen:section-min-height tallscreen:section-min-height my-12 scroll-mt-20 p-6">
         <h2 class="mb-6 text-center text-4xl font-bold text-slate-900 dark:text-white sm:text-5xl">Our Logos</h2>
         <ul class="mx-auto my-12 flex list-none flex-col items-center gap-8 sm:flex-row">
           <li
@@ -82,7 +82,10 @@
       </section>
       <hr class="mx-auto w-1/2 bg-black dark:bg-white" />
 
-      <section id="testimonial" class="my-12 p-6">
+      <section
+        id="testimonial"
+        class="widescreen:section-min-height tallscreen:section-min-height my-12 scroll-mt-20 p-6"
+      >
         <h2 class="mb-6 text-center text-4xl font-bold text-slate-900 dark:text-white sm:text-5xl">Testimonial</h2>
         <figure class="my-12">
           <blockquote class="relative rounded-3xl bg-teal-600 py-12 pl-14 pr-8 dark:bg-black">
@@ -123,9 +126,61 @@
       </section>
       <hr class="mx-auto w-1/2 bg-black dark:bg-white" />
 
-      <section id="contact" class="my-12 p-6">
+      <section id="contact" class="widescreen:section-min-height tallscreen:section-min-height my-12 scroll-mt-16 p-6">
         <h2 class="mb-6 text-center text-4xl font-bold text-slate-900 dark:text-white sm:text-5xl">Contact Us</h2>
+        <form action="" class="mx-auto flex max-w-4xl flex-col items-start gap-4 text-2xl sm:text-3xl">
+          <label for="subject">Subject:</label>
+          <input
+            type="text"
+            id="subject"
+            name="subject"
+            required
+            minlength="3"
+            maxlength="60"
+            placeholder="Your subject"
+            class="w-full rounded-xl border border-solid border-slate-900 p-3 text-2xl text-black dark:border-none sm:text-3xl"
+          />
+          <label for="message">Message:</label>
+          <textarea
+            name="message"
+            id="message"
+            cols="30"
+            rows="10"
+            placeholder="Your message"
+            required
+            class="w-full rounded-xl border border-solid border-slate-900 p-3 text-2xl text-black dark:border-none sm:text-3xl"
+          ></textarea>
+          <button
+            class="w-48 rounded-xl border border-solid border-slate-900 bg-teal-700 p-3 text-white hover:bg-teal-600 active:bg-teal-500 dark:border-none"
+          >
+            Submit
+          </button>
+        </form>
       </section>
     </main>
+
+    <footer id="footer" class="bg-teal-700 text-xl text-white">
+      <section class="mx-auto flex max-w-4xl flex-col p-4 sm:flex-row sm:justify-between">
+        <address>
+          <h2>Hot Wheels Mattel Toys, Inc.</h2>
+          777 TrackStarts street<br />
+          HeetFleet, Muscle Mania 71968-2023<br />
+          Email: <a href="mailto:hotwheels@mattel.com">hotwheels@mattel.com</a><br />
+          Phone: <a href="tel:+84777777777">(+84) 777-777-777</a>
+        </address>
+        <nav class="hidden flex-col gap-2 md:flex" aria-label="footer">
+          <a href="#logo" class="hover:opacity-90">Our logos</a>
+          <a href="#testimonial" class="hover:opacity-90">Testimonial</a>
+          <a href="#contact" class="hover:opacity-90">Contact Us</a>
+        </nav>
+        <div class="flex flex-col sm:gap-2">
+          <p class="text-right">
+            Copyright &copy;
+            <span id="year">2022</span>
+          </p>
+          <p class="text-right">All Rights Reserved</p>
+        </div>
+      </section>
+    </footer>
   </body>
 </html>
