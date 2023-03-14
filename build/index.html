@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Logo Me</title>
     <link rel="stylesheet" href="css/style.css" />
+    <script src="js/main.js" defer></script>
   </head>
   <body class="min-h-screen bg-slate-50 dark:bg-black dark:text-white">
     <header class="sticky top-0 z-10 bg-teal-700 text-white">
@@ -14,15 +15,29 @@
           <a href="#hotwheels">🐉 Logo Me</a>
         </h1>
         <div>
-          <button id="mobile-open-button" class="text-3xl focus:outline-none sm:hidden">&#9776;</button>
-          <nav class="hidden space-x-8 text-xl sm:block" aria-label="main">
+          <button id="mobile-open-button" class="cursor-pointer text-3xl md:hidden">&#9776;</button>
+          <nav class="hidden space-x-8 text-xl md:block" aria-label="main">
             <a href="#logo" class="hover:opacity-90">Our Logos</a>
-            <a href="#testimonial " class="hover:opacity-90">Testimonial </a>
+            <a href="#testimonial" class="hover:opacity-90">Testimonial </a>
             <a href="#contact" class="hover:opacity-90">Contact Us</a>
           </nav>
         </div>
       </section>
+      <section
+        id="mobile-menu"
+        class="absolute top-0 hidden w-full origin-top animate-open-menu flex-col justify-items-center bg-black text-5xl"
+      >
+        <button class="self-end px-6 text-8xl">&times;</button>
+        <nav class="flex min-h-screen flex-col items-center py-8" aria-label="mobile">
+          <a href="#hotwheels" class="w-full py-6 text-center hover:opacity-90">Home</a>
+          <a href="#logo" class="w-full py-6 text-center hover:opacity-90">Out logos</a>
+          <a href="#testimonial" class="w-full py-6 text-center hover:opacity-90">Testimonials</a>
+          <a href="#contact" class="w-full py-6 text-center hover:opacity-90">Contact Us</a>
+          <a href="#footer" class="w-full py-6 text-center hover:opacity-90">Legal</a>
+        </nav>
+      </section>
     </header>
+
     <main class="mx-auto mt-10 max-w-4xl">
       <section
         id="hotwheels"
